@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+    function fibonacci(number){
+    //if number is 1 or 2just return 1
+    if (number <= 2){
+        return (1)
+    }
+    else{
+        return (fibonacci(number-1)+fibonacci(number-2))
+    }
+    
+     //otherwise return sum of fibonacci of previous two numbers
+     }
+
+    function compute_and_display () {
+     // get the value from the input
+    var valueInput = document.getElementById("input_number").value
+     //result = fibonacci(input)
+    var resultValue = fibonacci(valueInput)
+     //display result on the webpage
+    document.getElementById("output_goes_here").innerHTML = resultValue
+     }
+
+</script>
+</head>
+<body>
+  <input id = "input_number">
+    <button type = "button" onclick = "computer_and_display()">Click Here</button>
+
+<p id="output_goes_here"></p>
+</body>
+</html>
